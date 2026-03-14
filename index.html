@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Performance Prediction</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Performance Prediction</h1>
+
+<form action="/predict" method="post">
+
+<label>Study Hours</label>
+<input type="number" name="study_hours" required>
+
+<label>Attendance (%)</label>
+<input type="number" name="attendance" required>
+
+<label>Previous Marks</label>
+<input type="number" name="marks" required>
+
+<button type="submit">Predict Result</button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
